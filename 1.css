@@ -1,0 +1,97 @@
+body {
+	background: #000;
+}
+svg {
+	position: absolute;
+	top: 50%;
+	left: 57%;
+	transform: translate(-50%,-50%);
+	width: 180%;
+/* 	border: 2px solid red; */
+}
+teeext {
+	font-family: "Noto Serif Tamil", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+#popup-links {
+    position: absolute; /* Ensure it's positioned properly */
+      background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+
+    /* Responsive width */
+ /*    width: 40vw; /* Use viewport width units for responsiveness */
+ /*    min-width: 200px; /* Minimum width to ensure it's not too small */
+    max-width: 600px; /* Maximum width to avoid being too large on big screens */
+
+    /* Text settings matching teeext */
+    font-family: "Noto Serif Tamil", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 100%; /* Base text size */
+    
+    display: none;  /* Hidden initially */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Custom CSS for Magnific Popup */
+.mfp-figure {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+ max-height: unset !important;
+}
+
+.mfp-img {
+ max-height: unset !important;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* Ensures images fit inside container without distortion */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Override default margins and paddings for responsiveness */
+.mfp-container {
+  padding: 0;
+  margin: 0;
+}
+
+/* Optional: for smaller screens */
+@media (max-width: 768px) {
+  .mfp-figure {
+    padding: 0;
+  },
+    #popup-links {
+        width: 80vw;  /* Wider on smaller screens */
+        left: 10vw !important;  /* Center more on smaller screens */
+     /*   font-size: 1.1rem; /* Slightly larger text on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #popup-links {
+        width: 90vw;  /* Almost full width on mobile */
+        left: 5vw !important;  /* Left padding to center it */
+     /*   font-size: 1.2rem;  /* Larger text for readability on mobile */
+    }
+}
+
+@media (min-width: 1024px) {
+    #popup-links {
+   font-size: 200%;   Slightly smaller text on larger screens */
+    }
+}
