@@ -12,7 +12,7 @@ body {
 }
 
 svg {
-    width: 180vw; /* Responsive width */
+    width: auto; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
   /*  max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
 }
