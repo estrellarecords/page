@@ -19,6 +19,7 @@ svg {
 	width: 180%;
 }
 .firefox-mobile svg {
+	left: 50%
     transform: scale(2);
 }
 teeext {
