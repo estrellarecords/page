@@ -12,10 +12,10 @@ body {
  /*   */
 svg {
  	position: fixed;
- top: 50%; 
+  /* top: 50%; 
 	left: 50%;
 	
-	transform: scale(2);
+	transform: scale(2); */
 }
 .firefox-mobile svg {
 	left: 50%
