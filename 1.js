@@ -92,6 +92,8 @@ $('#links').on('click', function(event) {
     if (isFirefoxMobile()) {
         document.body.classList.add('firefox-mobile');
     }
- if (isMobile()) {
+else if (isMobile()) {
         document.body.classList.add('general-mobile');
     }
+
+else {    document.body.classList.add('no-mobile');}
