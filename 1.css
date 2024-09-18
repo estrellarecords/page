@@ -17,7 +17,7 @@ svg {
 /* Firefox-specific styles */
 @-moz-document url-prefix() {
     svg {
-        width: 95vw; /* Slightly larger width for Firefox if needed */
+        width: 100vw; /* Slightly larger width for Firefox if needed */
     }
 }
 
