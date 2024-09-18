@@ -3,7 +3,7 @@ html, body {
     margin: 0;
 }
 
-/* Flexbox centering */
+/* Flexbox centering */ 
 body {
     display: flex;
     justify-content: center;
