@@ -18,7 +18,7 @@ svg {
 	transform: scale(2); */
 }
 .firefox-mobile svg {
-	left: 50%
+	/*  left: 50% */
     transform: scale(3);
 }
 
