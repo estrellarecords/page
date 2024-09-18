@@ -59,15 +59,15 @@ svg {
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
     #popup-links {
-        width: 80vw;
-        left: 10vw !important;
+        width: 100vw;
+       /* left: 10vw !important;
     }
 }
 
 @media (max-width: 480px) {
     #popup-links {
-        width: 90vw;
-        left: 5vw !important;
+        width: 100vw;
+       /* left: 5vw !important;
     }
 }
 
