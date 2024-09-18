@@ -22,7 +22,7 @@ $('#links').on('click', function(event) {
     const buttonHeight = $(this).outerHeight();
 
     const windowWidth = $(window).width();
-    const additionalOffset = 0; // Extra padding or offset
+    const additionalOffset = 10; // Extra padding or offset
 
     // Calculate left position as a percentage of window width
     let leftPosition = (buttonPosition.left / windowWidth) * 100;
