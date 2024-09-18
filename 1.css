@@ -7,7 +7,7 @@ body {
     background: #000;
     display: flex;
     justify-content: stretch;
-    align-items: stretch;
+    align-items: start;
     /* Flexbox to center content */
 }
  /*   */
