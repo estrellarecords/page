@@ -72,6 +72,12 @@ teeext {
 
 /* Optional: for smaller screens */
 @media (max-width: 768px) {
+
+    svg {
+        width: 90%; /* Make the SVG smaller on mobile devices */
+    }
+
+	
   .mfp-figure {
     padding: 0;
   },
@@ -83,6 +89,11 @@ teeext {
 }
 
 @media (max-width: 480px) {
+
+    svg {
+        width: 95%; /* Further reduce the size on smaller screens */
+    }
+	
     #popup-links {
         width: 90vw;  /* Almost full width on mobile */
         left: 5vw !important;  /* Left padding to center it */
