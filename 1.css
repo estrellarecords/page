@@ -8,7 +8,7 @@ body {
 }
 
 svg {
-    width: 90vw; /* 90% of the viewport width for responsiveness */
+    width: 100vw; /* 90% of the viewport width for responsiveness */
     height: auto; /* Maintain aspect ratio */
     max-width: 180%;
     /* Positioning handled by flexbox */
