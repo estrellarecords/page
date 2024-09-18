@@ -16,24 +16,22 @@ svg {
   /* top: 50%; 
 	left: 50%;
 	*/
- top: -30%;
+
 	 left: 10%; 
 	 align-items: start; /* vertical */
 	transform: scale(1.8); 
 	/*transform: translate(-50%,-50%); */
 }
-
+.no-mobile svg { top: -30%; }
 .general-mobile svg {
 	position: fixed;
-	top: 60%;
-	   left: 10%; 
+	
     transform: scale(2);
 }
 
 .firefox-mobile svg {
 	position: fixed;
-	top: 30%;
-	   left: 10%; 
+	
     transform: scale(2);
 }
 
