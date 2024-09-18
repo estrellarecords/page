@@ -1,23 +1,29 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox centering */
 body {
-    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    background: #000;
 }
 
 svg {
     width: 90vw;  /* 90% of the viewport width for responsiveness */
     height: auto; /* Maintain aspect ratio */
     max-width: 180%;
+     max-height: 90vh; /* Ensure it doesn't exceed viewport height */
     /* Positioning handled by flexbox */
 }
 
 /* Firefox-specific styles */
 @-moz-document url-prefix() {
     svg {
-        width: 100vw; /* Slightly larger width for Firefox if needed */
+        width: 95vw; /* Slightly larger width for Firefox if needed */
     }
 }
 
