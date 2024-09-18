@@ -14,8 +14,9 @@ body {
 svg {
     width: 100vw; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
-    max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
-
+  /*   max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
+ transform: scale(1.8); /* Scales the SVG to 150% of its original size */
+    transform-origin: center; /* Scale from the center */
 }
 
 teeext {
@@ -88,9 +89,8 @@ teeext {
         width: 80vw;  /* Wider on smaller screens */
         left: 10vw !important;  /* Center more on smaller screens */
      /*   font-size: 1.1rem; /* Slightly larger text on tablets */
-    },
-svg {     transform: scale(3.5); /* Scales the SVG to 150% of its original size */
-    transform-origin: center; /* Scale from the center */}
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -98,9 +98,8 @@ svg {     transform: scale(3.5); /* Scales the SVG to 150% of its original size 
         width: 90vw;  /* Almost full width on mobile */
         left: 5vw !important;  /* Left padding to center it */
      /*   font-size: 1.2rem;  /* Larger text for readability on mobile */
-    },
-svg {     transform: scale(3.5); /* Scales the SVG to 150% of its original size */
-    transform-origin: center; /* Scale from the center */}
+    }
+
 }
 
 @media (min-width: 1024px) {
