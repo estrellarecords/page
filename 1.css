@@ -22,16 +22,16 @@ svg {
 	transform: scale(1.8); 
 	/*transform: translate(-50%,-50%); */
 }
-.no-mobile svg { top: -30%; }
+.no-mobile svg {  top: -30%; }
 .general-mobile svg {
 	position: fixed;
-	
+	top: 30%; 
     transform: scale(1.8);
 }
 
 .firefox-mobile svg {
 	position: fixed;
-	
+	top: 30%; 
     transform: scale(2);
 }
 
