@@ -4,7 +4,7 @@ body {
 svg {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 70%;
 	transform: translate(-50%,-50%);
 	width: 180%;
 /* 	border: 2px solid red; */
