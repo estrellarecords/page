@@ -16,7 +16,7 @@ svg {
   /* top: 50%; 
 	left: 50%;
 	*/
-	
+	 align-items: start; /* vertical */
 	transform: scale(1.8); 
 	transform: translate(-50%,-70%);
 }
