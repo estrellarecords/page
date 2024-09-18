@@ -74,7 +74,7 @@ teeext {
 @media (max-width: 768px) {
 
     svg {
-        width: 90%; /* Make the SVG smaller on mobile devices */
+        width: 50%; /* Make the SVG smaller on mobile devices */
     }
 
 	
@@ -91,7 +91,7 @@ teeext {
 @media (max-width: 480px) {
 
     svg {
-        width: 95%; /* Further reduce the size on smaller screens */
+        width: 50%; /* Further reduce the size on smaller screens */
     }
 	
     #popup-links {
