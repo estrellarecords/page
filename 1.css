@@ -6,7 +6,7 @@ html, body {
 body {
     background: #000;
     display: Inline;
-    justify-content: center;
+    justify-content: end;
     align-items: start;
     /* Flexbox to center content */
 }
