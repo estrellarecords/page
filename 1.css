@@ -1,5 +1,5 @@
 body {
-	background: #FFF;
+	background: #000;
 }
 svg {
 	position: absolute;
@@ -74,7 +74,7 @@ teeext {
 @media (max-width: 768px) {
 
     svg {
-        width: 50%; /* Make the SVG smaller on mobile devices */
+    
 	    
     }
 
@@ -92,7 +92,7 @@ teeext {
 @media (max-width: 480px) {
 
     svg {
-        width: 50%; /* Further reduce the size on smaller screens */
+    
 	     
     }
 	
