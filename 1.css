@@ -18,7 +18,9 @@ svg {
 	transform: translate(-50%,-50%);
 	width: 180%;
 }
-
+.firefox-mobile svg {
+    transform: scale(2);
+}
 teeext {
 	font-family: "Noto Serif Tamil", serif;
   font-optical-sizing: auto;
