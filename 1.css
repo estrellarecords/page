@@ -19,6 +19,7 @@ svg {
 	transform: scale(1.8); 
 }
 .firefox-mobile svg {
+	position: fixed;
 	/*  left: 50% */
     transform: scale(2);
 }
