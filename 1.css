@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
 }
 
 /* Flexbox centering */
@@ -13,11 +12,9 @@ body {
 }
 
 svg {
-    width: 90vw;  /* 90% of the viewport width for responsiveness */
+    width: 90vw; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
-    max-width: 180%;
-     max-height: 90vh; /* Ensure it doesn't exceed viewport height */
-    /* Positioning handled by flexbox */
+    max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
 }
 
 /* Firefox-specific styles */
