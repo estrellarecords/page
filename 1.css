@@ -15,7 +15,7 @@ svg {
  	position: absolute;
 	top: 50%;
 	left: 50%;
- transform: scale(2.8); /* Scales the SVG to 150% of its original size */
+ transform: scale(5); /* Scales the SVG to 150% of its original size */
     transform-origin: center; /* Scale from the center */
 }
 
