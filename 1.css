@@ -14,7 +14,7 @@ body {
 svg {
  	position: absolute;
 	top: 50%;
-	left: 60%;
+	left: 55%;
 	transform: translate(-50%,-50%);
 	width: 180%;
 }
@@ -22,6 +22,8 @@ svg {
 	left: 50%
     transform: scale(2);
 }
+
+.firefox-mobile  {   background: #000FFF;}
 teeext {
 	font-family: "Noto Serif Tamil", serif;
   font-optical-sizing: auto;
