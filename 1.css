@@ -27,7 +27,7 @@ teeext {
   font-variation-settings:
     "wdth" 100;
 }
-.firefox-mobile body {
+.firefox-mobile {
     background: #FF0000;
 }
 .firefox-mobile svg {
