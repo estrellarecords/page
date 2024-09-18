@@ -12,23 +12,24 @@ body {
 }
  /*   */
 svg {
- 	position: relative;
+ 	position: fixed;
   /* top: 50%; 
 	left: 50%;
 	*/
- top: -150px;
-	 left: 30px; 
+ top: -30%;
+	 left: 10%; 
 	 align-items: start; /* vertical */
 	transform: scale(1.8); 
 	/*transform: translate(-50%,-50%); */
 }
 .firefox-mobile svg {
 	position: fixed;
-	  left: 30px; 
+	top: 30%;
+	   left: 10%; 
     transform: scale(2);
 }
 
-.firefox-mobile  {   background: #000FFF;}
+.firefox-mobile  {   background: #000000;}
 teeext {
 	font-family: "Noto Serif Tamil", serif;
   font-optical-sizing: auto;
