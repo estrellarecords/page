@@ -1,39 +1,36 @@
 $(document).ready(function() {
-    $(document).on('click', function (event) {
-        if (!$(event.target).closest('#popup-links, #links').length) {
-            popup.hide();
-        }
-    });
-    // Create the popup div and append it to the body
     const popup = $('<div id="popup-links"></div>').html(`
         <a href="https://example.com" target="_blank">Example Link 1</a><br>
         <a href="https://anotherlink.com" target="_blank">Example Link 2</a><br>
         <a href="https://yetanotherlink.com" target="_blank">Example Link 3</a>
     `);
 
-    // Append popup to the body
     $('body').append(popup);
 
-$('#links').on('click', function(event) {
-    event.stopPropagation();  // Prevent event bubbling up to document click
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('#popup-links, #links').length) {
+            popup.hide();
+        }
+    });
 
-    // Get the current position of the button
-    const buttonPosition = $(this).offset();
-    const buttonHeight = $(this).outerHeight();
+    $('#links').on('click', function(event) {
+        event.stopPropagation(); // Prevent event bubbling up to document click
 
-    const windowWidth = $(window).width();
-    const additionalOffset = 10; // Extra padding or offset
+        const buttonPosition = $(this).offset();
+        const buttonHeight = $(this).outerHeight();
 
-    // Calculate left position as a percentage of window width
-    let leftPosition = (buttonPosition.left / windowWidth) * 100;
+        const windowWidth = $(window).width();
+        const additionalOffset = 10; // Extra padding or offset
 
-    // Toggle popup visibility and position it relative to the button with extra offset
-    popup.css({
-        top: buttonPosition.top + buttonHeight + additionalOffset,  // Add offset to the top
-        left: `calc(${leftPosition}% + ${additionalOffset}px)`  // Responsive left position
-    }).toggle();
-});
+        // Calculate left position as a fixed value based on button's position
+        const leftPosition = buttonPosition.left + additionalOffset;
 
+        // Toggle popup visibility and position it relative to the button with extra offset
+        popup.css({
+            top: buttonPosition.top + buttonHeight + additionalOffset,  // Add offset to the top
+            left: leftPosition // Use fixed left position
+        }).toggle();
+    });
 
     $('#gallery').on('click', function(event) {
         event.preventDefault(); // Prevent default link behavior
@@ -44,10 +41,6 @@ $('#links').on('click', function(event) {
                     src: '1.jpg', // Image 1
                     type: 'image'
                 },
-                //{
-                 //   src: 'https://www.youtube.com/watch?v=xcJtL7QggTI', // YouTube video
-               //     type: 'iframe'
-             //   },
                 {
                     src: '2.jpg', // Image 2
                     type: 'image'
@@ -77,23 +70,22 @@ $('#links').on('click', function(event) {
             }
         });
     });
-});
-  // Function to detect Firefox on mobile
+
     function isFirefoxMobile() {
-        var userAgent = navigator.userAgent.toLowerCase();
-        return userAgent.includes('firefox') && (userAgent.includes('mobile')
-    }
-    function isMobile() {
-        var userAgent = navigator.userAgent.toLowerCase();
-        return  userAgent.includes('mobile');
+        const userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.includes('firefox') && userAgent.includes('mobile');
     }
 
-    // Add a class if Firefox on mobile is detected
+    function isMobile() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.includes('mobile');
+    }
+
     if (isFirefoxMobile()) {
         document.body.classList.add('firefox-mobile');
-    }
-else if (isMobile()) {
+    } else if (isMobile()) {
         document.body.classList.add('general-mobile');
+    } else {
+        document.body.classList.add('no-mobile');
     }
-
-else {    document.body.classList.add('no-mobile');}
+});
