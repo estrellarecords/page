@@ -81,11 +81,11 @@ $('#links').on('click', function(event) {
   // Function to detect Firefox on mobile
     function isFirefoxMobile() {
         var userAgent = navigator.userAgent.toLowerCase();
-        return userAgent.includes('firefox') );   //&& (userAgent.includes('android')
+        return userAgent.includes('firefox');   //&& (userAgent.includes('android')
     }
     function isMobile() {
         var userAgent = navigator.userAgent.toLowerCase();
-        return  userAgent.includes('mobile'));
+        return  userAgent.includes('mobile');
     }
 
     // Add a class if Firefox on mobile is detected
