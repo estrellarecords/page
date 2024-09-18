@@ -81,10 +81,17 @@ $('#links').on('click', function(event) {
   // Function to detect Firefox on mobile
     function isFirefoxMobile() {
         var userAgent = navigator.userAgent.toLowerCase();
-        return userAgent.includes('firefox') && (userAgent.includes('android') || userAgent.includes('mobile'));
+        return userAgent.includes('firefox') );   //&& (userAgent.includes('android')
+    }
+    function isMobile() {
+        var userAgent = navigator.userAgent.toLowerCase();
+        return  userAgent.includes('mobile'));
     }
 
     // Add a class if Firefox on mobile is detected
     if (isFirefoxMobile()) {
         document.body.classList.add('firefox-mobile');
+    }
+ if (isMobile()) {
+        document.body.classList.add('general-mobile');
     }
