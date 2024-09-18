@@ -14,7 +14,7 @@ body {
 svg {
     width: 180vw; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
-    max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
+  /*  max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
 }
 
 /* Firefox-specific styles */
