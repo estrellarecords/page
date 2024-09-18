@@ -12,9 +12,9 @@ body {
 }
 
 svg {
-    width: 100vw; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-  /*   max-width: 180%; /* Ensure it doesn’t exceed 180% of viewport width */
+ 	position: absolute;
+	top: 50%;
+	left: 57%;
  transform: scale(2.8); /* Scales the SVG to 150% of its original size */
     transform-origin: center; /* Scale from the center */
 }
