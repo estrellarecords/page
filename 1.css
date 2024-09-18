@@ -5,7 +5,7 @@ html, body {
 
 body {
     background: #000;
-    display: none;
+    display: Inline;
     justify-content: stretch;
     align-items: start;
     /* Flexbox to center content */
