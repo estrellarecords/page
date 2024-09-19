@@ -22,7 +22,7 @@ svg {
 	transform: scale(1.8); 
 	/*transform: translate(-50%,-50%); */
 }
-.no-mobile svg {  top: -20%; }
+.no-mobile svg {  top: -10%; }
 .general-mobile svg {
 	position: fixed;
 	top: 30%; 
