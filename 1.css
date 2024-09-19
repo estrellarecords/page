@@ -100,6 +100,8 @@ teeext {
     margin: 0;
     max-height: 100vh; /* Ensure the popup container takes full screen height */
     max-width: 100vw; /* Ensure the container takes full screen width */
+	    /* Force minimum height to avoid 0px height calculations */
+    min-height: 100vh;
 }
 
 .firefox-mobile .mfp-container {
@@ -128,15 +130,17 @@ teeext {
     object-fit: contain; /* Ensures the image fits within its container without stretching */
     display: block;
     margin: 0 auto;	
+
+	   /* Add this to force Firefox to calculate the height properly */
+    height: 100vh;
+    max-height: 100vh;
 }
 
 /* Firefox-specific styles using @-moz-document */
 @-moz-document url-prefix() {
     .mfp-img {
-        width: 100%; /* Force the image to take full width in Firefox */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 100vw; /* Constrain to the viewport width */
-        max-height: 100vh; /* Constrain to the viewport height */
+             height: 100vh !important; /* Force full height in Firefox */
+        max-height: 100vh !important; /* Override any inline styles */
     }
 }
 
