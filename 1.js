@@ -37,27 +37,27 @@ $(document).ready(function() {
         $.magnificPopup.open({
             items: [
                 {
-                    src: '/pics/1.jpeg', // Image 1
+                    src: '/page/pics/1.jpeg', // Image 1
                     type: 'image'
                 },
                 {
-                    src: '/pics/2.jpg', // Image 2
+                    src: '/page/pics/2.jpg', // Image 2
                     type: 'image'
                 },
                 {
-                    src: '/pics/3.jpg', // Image 3
+                    src: '/page/pics/3.jpg', // Image 3
                     type: 'image'
                 },
                 {
-                    src: '/pics/4.jpg', // Image 4
+                    src: '/page/pics/4.jpg', // Image 4
                     type: 'image'
                 },
                 {
-                    src: '/pics/5.jpg', // Image 5
+                    src: '/page/pics/5.jpg', // Image 5
                     type: 'image'
                 },
                 {
-                    src: '/pics/6.jpg', // Image 6
+                    src: '/page/pics/6.jpg', // Image 6
                     type: 'image'
                 }
                 // Add more items as needed
