@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background: #000FFF;
+    background: #000000;
     display: Inline;
     justify-content: end; /* horizontal */ 
     align-items: start; /* vertical */
