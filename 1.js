@@ -37,11 +37,27 @@ $(document).ready(function() {
         $.magnificPopup.open({
             items: [
                 {
-                    src: '1.jpg', // Image 1
+                    src: 'pics/1.jpeg', // Image 1
                     type: 'image'
                 },
                 {
-                    src: '2.jpg', // Image 2
+                    src: 'pics/2.jpg', // Image 2
+                    type: 'image'
+                },
+                {
+                    src: 'pics/3.jpg', // Image 3
+                    type: 'image'
+                },
+                {
+                    src: 'pics/4.jpg', // Image 4
+                    type: 'image'
+                },
+                {
+                    src: 'pics/5.jpg', // Image 5
+                    type: 'image'
+                },
+                {
+                    src: 'pics/6.jpg', // Image 6
                     type: 'image'
                 }
                 // Add more items as needed
