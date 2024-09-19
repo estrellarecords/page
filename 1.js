@@ -37,23 +37,23 @@ $(document).ready(function() {
         $.magnificPopup.open({
             items: [
                 {
-                    src: '/page/pics/1.jpeg', // Image 1
+                    src: '/pics/1.jpeg', // Image 1
                     type: 'image'
                 },
                 {
-                    src: '/page/pics/2.jpg', // Image 2
+                    src: '/pics/2.jpg', // Image 2
                     type: 'image'
                 },
                 {
-                    src: '/page/pics/3.jpg', // Image 3
+                    src: '/pics/3.jpg', // Image 3
                     type: 'image'
                 },
                 {
-                    src: '/page/pics/4.jpg', // Image 4
+                    src: '/pics/4.jpg', // Image 4
                     type: 'image'
                 },
                 {
-                    src: '/page/pics/5.jpg', // Image 5
+                    src: '/pics/5.jpg', // Image 5
                     type: 'image'
                 },
                 {
