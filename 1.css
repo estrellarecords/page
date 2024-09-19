@@ -110,7 +110,7 @@ teeext {
     margin: 0;
     padding: 0;
     width: 100%; /* Force figure to take full width */
-    height: auto; /* Force figure to take full height */
+    height: 100%; /* Force figure to take full height */
 }
 /* General styles for .mfp-img */
 .mfp-img {
