@@ -96,17 +96,21 @@ teeext {
 
 /* Adjustments for Magnific Popup images */
 .mfp-figure {
-    max-width: 100%;
-    margin: auto; /* Center the image */
-    padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+ max-height: unset !important;
 }
-
 .mfp-img {
-    max-height: 80vh; /* Prevent image overflow */
-    max-width: 100%;
-    object-fit: contain; /* Ensure it fits without distortion */
-    display: block;
-    margin: 0 auto;
+ max-height: unset !important;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* Ensures images fit inside container without distortion */
+  display: block;
+  margin: 0 auto;
 }
 
 /* Optional: for smaller screens */
