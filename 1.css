@@ -121,6 +121,9 @@ teeext {
     object-fit: contain; /* Ensures the image retains its aspect ratio */
     display: block;
     margin: 0 auto;
+
+	  min-width: 100px; /* Set a minimum width to avoid collapse */
+    min-height: 100px; /* Set a minimum height */
 }
 
 /* Firefox-specific styles using @-moz-document */
