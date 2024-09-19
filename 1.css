@@ -84,6 +84,7 @@ teeext {
     padding: 0;
     margin: 0;
     max-height: 100vh; /* Ensure the popup container takes full screen height */
+    max-width: 100vw; /* Ensure the container takes full screen width */
 }
 
 .firefox-mobile .mfp-container {
@@ -94,15 +95,6 @@ teeext {
     min-height: 100vh; /* Ensure full height for Firefox mobile */
 }
 
-.mfp-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    max-height: 100vh; /* Ensure the container takes full screen height */
-    max-width: 100vw; /* Ensure the container takes full screen width */
-}
 
 .mfp-figure {
 	
