@@ -109,7 +109,7 @@ teeext {
     padding: 0;
   },
     #popup-links {
-        width: 80vw;  /* Wider on smaller screens */
+        width: 100vw;  /* Wider on smaller screens */
         left: 10vw !important;  /* Center more on smaller screens */
      /*   font-size: 1.1rem; /* Slightly larger text on tablets */
     }
@@ -118,7 +118,7 @@ teeext {
 
 @media (max-width: 480px) {
     #popup-links {
-        width: 90vw;  /* Almost full width on mobile */
+        width: 100vw;  /* Almost full width on mobile */
         left: 5vw !important;  /* Left padding to center it */
      /*   font-size: 1.2rem;  /* Larger text for readability on mobile */
     }
