@@ -57,7 +57,7 @@ $(document).ready(function() {
                     type: 'image'
                 },
                 {
-                    src: '/page/pics/6.jpg', // Image 6
+                    src: '/pics/6.jpg', // Image 6
                     type: 'image'
                 }
                 // Add more items as needed
