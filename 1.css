@@ -56,7 +56,7 @@ teeext {
     border: 1px solid #ccc;
     padding: 10px;
     z-index: 1000;
-
+line-height: 200%;
     /* Responsive width */
  /*    width: 40vw; /* Use viewport width units for responsiveness */
  /*    min-width: 200px; /* Minimum width to ensure it's not too small */
