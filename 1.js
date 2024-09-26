@@ -1,6 +1,7 @@
 $(document).ready(function() {
     const popup = $('<div id="popup-links"></div>').html(`
         <a href="https://soundcloud.com/estrellarecords" target="_blank">Soundcloud</a><br>
+        <a href="https://www.mixcloud.com/known1234/" target="_blank">Mixcloud</a><br>
         <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Contact</a>
     `);
 
