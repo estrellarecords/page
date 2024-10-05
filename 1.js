@@ -104,9 +104,9 @@ $(document).ready(function() {
                     const mediaIndex = this.index + 1; // Get 1-based index of the current media
 
                     if (mediaType === 'image') {
-                        clicky.goal('watched ' + mediaIndex + ' picture');
+                        clicky.goal('p ' + mediaIndex);
                     } else if (mediaType === 'iframe') {
-                        clicky.goal('watched ' + mediaIndex + ' video');
+                        clicky.goal('v ' + mediaIndex);
                     }
                 }
             }
