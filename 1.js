@@ -106,11 +106,18 @@ $(document).ready(function() {
                     const mediaType = this.currItem.type; // 'image' or 'iframe'
                     const mediaIndex = this.index + 1; // Get 1-based index of the current media
 
-                    // Log each image or video view as an action
+                    // Get the current time in GMT+1
+                    const currentTime = new Date();
+                    const timeOffset = currentTime.getTimezoneOffset(); // Get offset in minutes from UTC
+                    const GMT1Offset = -60; // GMT+1 offset is -60 minutes
+                    const localTime = new Date(currentTime.getTime() + (GMT1Offset - timeOffset) * 60000); // Adjust time to GMT+1
+                    const time = localTime.toISOString().split('T')[1].split('.')[0]; // Extract time part from ISO string
+                    
+                    // Log each image or video view as a goal with the current time (GMT+1)
                     if (mediaType === 'image') {
-                        clicky.log('/p/' + mediaIndex, 'P' + mediaIndex, 'view');
+                        clicky.goal('ViewImage' + mediaIndex + ' time ' + time); // Image view with time
                     } else if (mediaType === 'iframe') {
-                        clicky.log('/v/' + mediaIndex, 'V' + mediaIndex, 'view');
+                        clicky.goal('ViewVideo' + mediaIndex + ' time ' + time); // Video view with time
                     }
 
                     // Add the mediaIndex to the viewed items set
@@ -118,7 +125,7 @@ $(document).ready(function() {
 
                     // Check if all items in the gallery have been viewed
                     if (viewedItems.size === totalItems) {
-                        clicky.goal('FULLG');
+                        clicky.goal('FULLG'); // Full gallery viewed goal
                     }
                 }
             }
