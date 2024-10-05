@@ -32,9 +32,7 @@ $(document).ready(function() {
         }).toggle();
     });
 
-    // Track viewed items to detect when the entire gallery has been seen
-    const totalItems = 8; // Total number of gallery items (images + videos)
-    const viewedItems = new Set(); // Store unique views
+
 
     $('#gallery').on('click', function(event) {
         event.preventDefault(); // Prevent default link behavior
@@ -115,18 +113,11 @@ $(document).ready(function() {
                     
                     // Log each image or video view as a goal with the current time (GMT+1)
                     if (mediaType === 'image') {
-                        clicky.goal('ViewImage' + mediaIndex + ' time ' + time); // Image view with time
+                        clicky.goal('P' + mediaIndex + ' ' + time); // Image view with time
                     } else if (mediaType === 'iframe') {
-                        clicky.goal('ViewVideo' + mediaIndex + ' time ' + time); // Video view with time
+                        clicky.goal('V' + mediaIndex + ' ' + time); // Video view with time
                     }
 
-                    // Add the mediaIndex to the viewed items set
-                    viewedItems.add(mediaIndex);
-
-                    // Check if all items in the gallery have been viewed
-                    if (viewedItems.size === totalItems) {
-                        clicky.goal('FULLG'); // Full gallery viewed goal
-                    }
                 }
             }
         });
