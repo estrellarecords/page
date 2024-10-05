@@ -60,19 +60,27 @@ $(document).ready(function() {
                 {
                     src: '/pics/6.jpg', // Image 6
                     type: 'image'
+                },
+                {
+                    src: 'https://www.youtube.com/watch?v=example1', // Video 1
+                    type: 'iframe'
+                },
+                {
+                    src: 'https://vimeo.com/example2', // Video 2
+                    type: 'iframe'
                 }
                 // Add more items as needed
             ],
             gallery: {
                 enabled: true, // Enables gallery mode
                 navigateByImgClick: true, // Allows navigation by clicking on images
-                preload: [0, 1] // Preload current and next image
+                preload: [0, 1] // Preload current and next image/video
             },
             type: 'image', // Default type to image
             mainClass: 'mfp-img-mobile', // Mobile responsive
-            tLoading: 'Loading image #%curr%...', // Loading text
+            tLoading: 'Loading content #%curr%...', // Loading text for both images and videos
             image: {
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', // Error text
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', // Error text for images
                 verticalFit: true // Fits image vertically
             },
             iframe: {
@@ -80,7 +88,25 @@ $(document).ready(function() {
                     youtube: {
                         index: 'youtube.com/', // YouTube link detection
                         id: 'v=', // Get the video ID from the link
-                        src: 'https://www.youtube.com/embed/%id%?autoplay=1' // Embedded video URL
+                        src: 'https://www.youtube.com/embed/%id%?autoplay=1' // Embedded YouTube video URL
+                    },
+                    vimeo: {
+                        index: 'vimeo.com/', // Vimeo link detection
+                        id: '/', // Get the video ID from the link
+                        src: 'https://player.vimeo.com/video/%id%?autoplay=1' // Embedded Vimeo video URL
+                    }
+                },
+                tError: '<a href="%url%">The video #%curr%</a> could not be loaded.' // Error text for videos
+            },
+            callbacks: {
+                change: function() {
+                    const mediaType = this.currItem.type; // 'image' or 'iframe'
+                    const mediaIndex = this.index + 1; // Get 1-based index of the current media
+
+                    if (mediaType === 'image') {
+                        clicky.goal('watched ' + mediaIndex + ' picture');
+                    } else if (mediaType === 'iframe') {
+                        clicky.goal('watched ' + mediaIndex + ' video');
                     }
                 }
             }
