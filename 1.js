@@ -104,10 +104,10 @@ $(document).ready(function() {
                     const mediaType = this.currItem.type; // 'image' or 'iframe'
                     const mediaIndex = this.index + 1; // Get 1-based index of the current media
 
-                    // Get the current time in GMT+1
+                    // Get the current time in uct+2
                     const currentTime = new Date();
                     const timeOffset = currentTime.getTimezoneOffset(); // Get offset in minutes from UTC
-                    const GMT1Offset = -60; // GMT+1 offset is -60 minutes
+                    const UTC2Offset = -120; // UTC+2 offset is -120 minutes
                     const localTime = new Date(currentTime.getTime() + (GMT1Offset - timeOffset) * 60000); // Adjust time to GMT+1
                     const time = localTime.toISOString().split('T')[1].split('.')[0]; // Extract time part from ISO string
                     
