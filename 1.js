@@ -32,6 +32,10 @@ $(document).ready(function() {
         }).toggle();
     });
 
+    // Track viewed items to detect when the entire gallery has been seen
+    const totalItems = 8; // Total number of gallery items (images + videos)
+    const viewedItems = new Set(); // Store unique views
+
     $('#gallery').on('click', function(event) {
         event.preventDefault(); // Prevent default link behavior
 
@@ -69,7 +73,6 @@ $(document).ready(function() {
                     src: 'https://vimeo.com/example2', // Video 2
                     type: 'iframe'
                 }
-                // Add more items as needed
             ],
             gallery: {
                 enabled: true, // Enables gallery mode
@@ -103,10 +106,19 @@ $(document).ready(function() {
                     const mediaType = this.currItem.type; // 'image' or 'iframe'
                     const mediaIndex = this.index + 1; // Get 1-based index of the current media
 
+                    // Log each image or video view as an action
                     if (mediaType === 'image') {
-                        clicky.goal('p ' + mediaIndex);
+                        clicky.log('/pics/' + mediaIndex, 'P' + mediaIndex, 'view');
                     } else if (mediaType === 'iframe') {
-                        clicky.goal('v ' + mediaIndex);
+                        clicky.log('/videos/' + mediaIndex, 'V' + mediaIndex, 'view');
+                    }
+
+                    // Add the mediaIndex to the viewed items set
+                    viewedItems.add(mediaIndex);
+
+                    // Check if all items in the gallery have been viewed
+                    if (viewedItems.size === totalItems) {
+                        clicky.goal('FULLG');
                     }
                 }
             }
