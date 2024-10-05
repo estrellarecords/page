@@ -108,9 +108,9 @@ $(document).ready(function() {
 
                     // Log each image or video view as an action
                     if (mediaType === 'image') {
-                        clicky.log('/pics/' + mediaIndex, 'P' + mediaIndex, 'view');
+                        clicky.log('/p/' + mediaIndex, 'P' + mediaIndex, 'view');
                     } else if (mediaType === 'iframe') {
-                        clicky.log('/videos/' + mediaIndex, 'V' + mediaIndex, 'view');
+                        clicky.log('/v/' + mediaIndex, 'V' + mediaIndex, 'view');
                     }
 
                     // Add the mediaIndex to the viewed items set
