@@ -110,7 +110,7 @@ $(document).ready(function() {
                     const currentTime = new Date();
                     const timeOffset = currentTime.getTimezoneOffset(); // Get offset in minutes from UTC
                     const UTC2Offset = -120; // UTC+2 offset is -120 minutes
-                    const localTime = new Date(currentTime.getTime() + (GMT1Offset - timeOffset) * 60000); // Adjust time to GMT+1
+                    const localTime = new Date(currentTime.getTime() + (UTC2Offset - timeOffset) * 60000); // Adjust time to GMT+1
                     const time = localTime.toISOString().split('T')[1].split('.')[0]; // Extract time part from ISO string
                     
                     // Log each image or video view as a goal with the current time (GMT+1)
