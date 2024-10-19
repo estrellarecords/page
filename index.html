@@ -13,7 +13,7 @@
 <!-- Magnific Popup JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-<script async data-id="101465921" src="//static.getclicky.com/js"></script>
+<script data-id="101465921" src="//static.getclicky.com/js"></script>
 
 
 <!-- jQuery -->
@@ -105,3 +105,23 @@
 
 
 <script src="1.js"></script>
+
+
+<script>
+    // Ensure the DOM is ready before adding event listeners
+    $(document).ready(function() {
+        // Check if clicky object is defined
+        if (typeof clicky !== 'undefined') {
+            // Add click event listeners for the buttons
+            $('#galleryButton').on('click', function() {
+                clicky.log('#/G', 'G');
+            });
+
+            $('#linksButton').on('click', function() {
+                clicky.log('#/L', 'L');
+            });
+        } else {
+            console.warn('Clicky is not defined yet.');
+        }
+    });
+</script>
