@@ -4,22 +4,25 @@
     <!-- Referrer Policy Meta Tag -->
     <meta name="referrer" content="no-referrer-when-downgrade">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 
-    <!-- Magnific Popup JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-    <!-- Clicky script (without async to ensure proper load order) -->
-    <script data-id="101465921" src="//static.getclicky.com/js"></script>
+<script data-id="101465921" src="https://static.getclicky.com/js"></script>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="1.css" media="screen" />
+
+
+<!-- jQuery -->
+
+
+<link rel="stylesheet" type="text/css" href="1.css" media="screen" />
 </head>
-<body>
+	<body>
 <svg id="logo" viewBox="-70 -70 300 194">
     <defs>
         <radialGradient id="grad">
@@ -79,40 +82,27 @@
     <circle cx="20" cy="34" r="0" fill="url(#grad)" filter="url(#blur4)" opacity="0.9">
         <animate attributeName="r" values="0;80;0" dur=".6s" begin="4.5s" repeatCount="none" fill="freeze" keyTimes="0;0.5;1" keySplines="0 0.9 0 0.9; 1 0 1 0" calcMode="spline" />
     </circle>
-    <!-- Buttons appearing at the bottom -->
+	 <!-- Buttons appearing at the bottom -->
     <g id="buttons" opacity="0">
         <!-- First button -->
-        <g id="galleryButton">
-            <text x="52" y="62" style="font-family: 'Times New Roman', Times, serif;" font-size="8" fill="white" cursor="pointer">| Gallery |</text>
-        </g>
+        <a href="#" id="gallery" clicky.log('#/G','G');>
+
+            <text x="52" y="62" style="font-family: 'Times New Roman', Times, serif;"font-size="8" fill="white">| Gallery |</text>
+        </a>
+			
         <!-- Second button -->
-        <g id="linksButton">
-            <text x="90" y="62" style="font-family: 'Times New Roman', Times, serif;" font-size="8" fill="white" cursor="pointer">| Links |</text>
-        </g>
+           <a href="#" id="links">
+            
+            <text x="90" y="62" style="font-family: 'Times New Roman', Times, serif;"font-size="8" fill="white">| Links |</text>
+        </a>
     </g>
+
     <!-- Animate buttons to appear at the end -->
     <animate attributeName="opacity" xlink:href="#buttons" values="0;1" dur="2s" begin="4.5s" fill="freeze" />
 </svg>
-
-<script src="1.js"></script>
-
-<script>
-    // Ensure the DOM is ready before adding event listeners
-    $(document).ready(function() {
-        // Check if clicky object is defined
-        if (typeof clicky !== 'undefined') {
-            // Add click event listeners for the buttons
-            $('#galleryButton').on('click', function() {
-                clicky.log('#/G', 'G');
-            });
-
-            $('#linksButton').on('click', function() {
-                clicky.log('#/L', 'L');
-            });
-        } else {
-            console.warn('Clicky is not defined yet.');
-        }
-    });
-</script>
 </body>
 </html>
+
+
+
+<script src="1.js"></script>
