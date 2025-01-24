@@ -65,8 +65,8 @@ $(document).ready(function() {
                 }   
            ,
                {
-                    src: 'https://www.youtube.com/watch?v=0R-UEiYKYvs', // Video 1
-                  type: 'iframe'
+              //      src: 'https://www.youtube.com/watch?v=0R-UEiYKYvs', // Video 1
+            //      type: 'iframe'
                }
                 //,
            //     {
