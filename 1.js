@@ -21,12 +21,12 @@ $('#links').on('click', function(event) {
     const buttonHeight = $(this).outerHeight();
     const popupHeight = popup.outerHeight(); // Get popup height
 
-    const additionalOffset = 0; // Extra padding or offset
 
-    const leftPosition = buttonPosition.left + additionalOffset;
+
+    const leftPosition = buttonPosition.left;
     
-    // Move the popup **higher** by subtracting its height + extra offset
-    const topPosition = buttonPosition.top - popupHeight - additionalOffset;
+    // Move the popup **higher** by subtracting its height 
+    const topPosition = buttonPosition.top - popupHeight ;
 
     popup.css({
         top: topPosition,  
