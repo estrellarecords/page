@@ -14,24 +14,25 @@ $(document).ready(function() {
         }
     });
 
-    $('#links').on('click', function(event) {
-        event.stopPropagation(); // Prevent event bubbling up to document click
+$('#links').on('click', function(event) {
+    event.stopPropagation(); // Prevent event bubbling up to document click
 
-        const buttonPosition = $(this).offset();
-        const buttonHeight = $(this).outerHeight();
+    const buttonPosition = $(this).offset();
+    const buttonHeight = $(this).outerHeight();
+    const popupHeight = popup.outerHeight(); // Get popup height
 
-        const windowWidth = $(window).width();
-        const additionalOffset = 10; // Extra padding or offset
+    const additionalOffset = 10; // Extra padding or offset
 
-        // Calculate left position as a fixed value based on button's position
-        const leftPosition = buttonPosition.left + additionalOffset;
+    const leftPosition = buttonPosition.left + additionalOffset;
+    
+    // Move the popup **higher** by subtracting its height + extra offset
+    const topPosition = buttonPosition.top - popupHeight - additionalOffset;
 
-        // Toggle popup visibility and position it relative to the button with extra offset
-        popup.css({
-            top: buttonPosition.top + buttonHeight + additionalOffset,  // Add offset to the top
-            left: leftPosition // Use fixed left position
-        }).toggle();
-    });
+    popup.css({
+        top: topPosition,  
+        left: leftPosition 
+    }).toggle();
+});
 
 
 
