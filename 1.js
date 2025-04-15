@@ -65,11 +65,11 @@ $('#links').on('click', function(event) {
                     src: '/pics/6.jpg', // Image 6
                     type: 'image'
                 }   
-           ,
-               {
+          //  ,
+            //    {
               //      src: 'https://www.youtube.com/watch?v=0R-UEiYKYvs', // Video 1
             //      type: 'iframe'
-               }
+           //     }
                 //,
            //     {
            //         src: 'https://vimeo.com/example2', // Video 2
