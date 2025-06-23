@@ -10,14 +10,14 @@
     <meta name="keywords" content="Estrella Records, Independent Music, Music Label, Gallery, Artist Links, Techno, House, Rave, Madrid">
 
     <!-- Favicon and Icons -->
-    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-    <link rel="manifest" href="/icons/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="/pics/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/pics/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/pics/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/pics/icons/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/pics/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/pics/icons/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/pics/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#FA843C" />
 
 
