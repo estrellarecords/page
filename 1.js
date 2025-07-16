@@ -6,7 +6,7 @@ $(document).ready(function() {
 const storeItems = [
     {
         title: 'Blanco y Negro Swaroski Headphones',
-        description: '2010s Pioneer HDJ2000 Ibiza Limited Edition. 40 units ever built. Covered in swaroski crystals.'
+        description: 'Ibiza 2010s. Pioneer HDJ2000 Limited Edition. 40 units ever built. Covered in swaroski crystals.'
        +   ' <p> Comes with the official Pioneer Blanco y Negro cover box, a hard plastic protective case, and the business card of the jewelry store that made them. Mint condition. </p>'
        +   ' <p><a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php">Read more</a></p>',
         price: '€3000.00',
