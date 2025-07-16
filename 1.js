@@ -28,7 +28,10 @@ const storeItems = [
 const storePopup = $(`
     <div id="store-popup">
         <div class="close-btn">&times;</div>
-        <div id="store-content"></div>
+        <div id="store-content">   <h2>Legal Notice</h2>
+    <p>This is a personal webpage created for the occasional sale of a privately owned collectible items. It is not a commercial or professional business activity.</p>
+    <h2>Privacy Policy</h2>
+    <p>This website does not collect personal data through forms. If you contact me by email, the information you provide (such as your name, email address, and message) will be used solely to respond to your inquiry or manage the possible sale. Your data will not be stored or shared with third parties.</p>
     </div>
 `);
 
