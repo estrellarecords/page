@@ -13,16 +13,10 @@ const storeItems = [
         image: '/pics/store/vinyl1.jpg'
     },
     {
-        title: 'Estrella Logo T-Shirt',
-        description: 'Black, 100% cotton, sizes S–XL.',
-        price: '€20.00',
-        image: '/pics/store/shirt1.jpg'
-    },
-    {
-        title: 'Sticker Pack',
-        description: '5 high-quality vinyl stickers.',
-        price: '€4.00',
-        image: '/pics/store/stickers.jpg'
+      //  title: 'Old Antique German Pharmacy Jarsd Logo T-Shirt',
+      //  description: 'Black, 100% cotton, sizes S–XL.',
+     //   price: '€20.00',
+     //   image: '/pics/store/shirt1.jpg'
     }
 ];
 
