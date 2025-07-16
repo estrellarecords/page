@@ -5,9 +5,10 @@ $(document).ready(function() {
     
 const storeItems = [
     {
-        title: 'Vinyl Release #001',
-        description: '12" Vinyl – 180g – Techno & House blend.',
-        price: '€12.00',
+        title: 'Blanco y Negro Swaroski Headphones',
+        description: '2010s Ibiza Limited Edition. 40 units ever built. Covered in swaroski crystals, come with official pioneer Blanco y Negro box, aswell a hard plastic protective case.'
+       +   ' <p> Comes with the business card of the jewelry that made them. Mint condition. <a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php">Read more</a> </p>',
+        price: '€3000.00',
         image: '/pics/store/vinyl1.jpg'
     },
     {
@@ -29,7 +30,7 @@ const storePopup = $(`
     <div id="store-popup">
         <div class="close-btn">&times;</div>
         <div id="store-content">      </div>
-        <div>  <p>To purchase, please contact throught email <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Here</a> </p>  <h3>Legal Notice & Privacy Policy</h3>
+        <div>  <p>To purchase, please contact throught email <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Here</a> </p></br>  <h3>Legal Notice & Privacy Policy</h3>
     <p>This is a personal webpage created for the occasional sale of privately owned collectible items. It is not a commercial or professional business activity. </p>
     <p>This website does not collect personal data through forms. If you contact me by email, the information you provide (such as your name, email address, and message) will be used solely to respond to your inquiry or manage the possible sale. Your data will not be stored or shared with third parties.</p>
  </div>
