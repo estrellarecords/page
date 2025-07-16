@@ -1,4 +1,80 @@
 $(document).ready(function() {
+
+
+
+    
+const storeItems = [
+    {
+        title: 'Vinyl Release #001',
+        description: '12" Vinyl – 180g – Techno & House blend.',
+        price: '€12.00',
+        image: '/pics/store/vinyl1.jpg'
+    },
+    {
+        title: 'Estrella Logo T-Shirt',
+        description: 'Black, 100% cotton, sizes S–XL.',
+        price: '€20.00',
+        image: '/pics/store/shirt1.jpg'
+    },
+    {
+        title: 'Sticker Pack',
+        description: '5 high-quality vinyl stickers.',
+        price: '€4.00',
+        image: '/pics/store/stickers.jpg'
+    }
+];
+
+// Create the store popup HTML
+const storePopup = $(`
+    <div id="store-popup">
+        <div class="close-btn">&times;</div>
+        <div id="store-content"></div>
+    </div>
+`);
+
+$('body').append(storePopup);
+
+// Populate the store
+storeItems.forEach(item => {
+    const html = `
+        <div class="store-item">
+            <img src="${item.image}" alt="${item.title}">
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <p class="price">${item.price}</p>
+        </div>
+    `;
+    $('#store-content').append(html);
+});
+
+// Show/hide logic
+$('#store').on('click', function(event) {
+    event.preventDefault();
+    $('#store-popup').fadeIn(300);
+});
+
+$('#store-popup .close-btn').on('click', function() {
+    $('#store-popup').fadeOut(300);
+});
+
+// Optional: close on ESC
+$(document).on('keydown', function(e) {
+    if (e.key === "Escape") {
+        $('#store-popup').fadeOut(300);
+    }
+});
+
+    
+
+
+
+
+
+
+
+
+
+    
     const popup = $('<div id="popup-links"></div>').html(`
         <a href="https://www.mixcloud.com/juliocaroa/" target="_blank">Mixcloud</a><br>
         <a href="https://soundcloud.com/estrellarecords" target="_blank">Soundcloud</a><br>
