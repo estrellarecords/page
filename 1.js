@@ -29,7 +29,7 @@ const storePopup = $(`
     <div id="store-popup">
         <div class="close-btn">&times;</div>
         <div id="store-content">      </div>
-        <div>  <p>To purchase, please contact juliocaro@estrellarecords.com  </p>  <h3>Legal Notice & Privacy Policy</h3>
+        <div>  <p>To purchase, please contact throught email <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Here</a> </p>  <h3>Legal Notice & Privacy Policy</h3>
     <p>This is a personal webpage created for the occasional sale of privately owned collectible items. It is not a commercial or professional business activity. </p>
     <p>This website does not collect personal data through forms. If you contact me by email, the information you provide (such as your name, email address, and message) will be used solely to respond to your inquiry or manage the possible sale. Your data will not be stored or shared with third parties.</p>
  </div>
