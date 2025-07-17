@@ -6,7 +6,7 @@ $(document).ready(function() {
 const storeItems = [
     {
         title: 'Blanco y Negro Swaroski Headphones',
-        description: 'Pioneer HDJ2000 Limited Edition. Ibiza, early 2010s. Blanco y Negro record label official product. 40 units ever built. Worn by famous Djs. Handmade by master jewelers with aprox. 4.000~ SWAROVSKI ELEMENTS T crystals.'
+        description: 'Pioneer HDJ2000 Limited Edition. Ibiza, early 2010s. Blanco y Negro record label official product. 40 units ever built. Worn by famous balearic Djs. Handmade by master jewelers with aprox. 4.000~ SWAROVSKI ELEMENTS T crystals.'
        +   ' <p> Comes with the Pioneer Blanco y Negro cover box, a hard plastic protective case, and the business card of the jeweler that made them. Mint condition. </p>'
        +   ' <p><a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php">Read more</a></p>',
         price: '€3000.00',
