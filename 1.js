@@ -11,13 +11,13 @@ const storeItems = [
        +   ' <p><a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php">Read more</a></p>',
         price: '€3000.00',
         image: '/pics/store/vinyl1.jpg'
-    },
-    {
+    }//,
+//    {
       //  title: 'Old Antique German Pharmacy Jarsd Logo T-Shirt',
       //  description: 'Black, 100% cotton, sizes S–XL.',
      //   price: '€20.00',
      //   image: '/pics/store/shirt1.jpg'
-    }
+//    }
 ];
 
 // Create the store popup HTML
