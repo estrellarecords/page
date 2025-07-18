@@ -10,7 +10,7 @@ const storeItems = [
        +   ' <p> Comes with the Pioneer Blanco y Negro cover box, a hard plastic protective case, and the business card of the jeweler that made them. Mint condition. </p>'
        +   ' <p><a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php">Read more</a></p>',
         price: '€3000.00',
-        image: '/pics/store/1.jpg'
+        image: '/pics/store/1.jpeg'
     }//,
 //    {
       //  title: 'Old Antique German Pharmacy Jarsd Logo T-Shirt',
