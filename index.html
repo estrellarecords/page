@@ -129,19 +129,43 @@
     </circle>
 
     <!-- BUTTONS: Keep exactly as original -->
-    <g id="buttons" opacity="0">
-        <a href="#" id="gallery" onclick="clicky.log('#/G','G');">
-            <text x="52" y="62" style="font-family: 'Times New Roman', Times, serif;" font-size="8" fill="white">| Gallery </text>
-        </a>
+<g id="buttons" opacity="1">
+    <a href="#" id="gallery" onclick="clicky.log('#/G','G');">
+        <text x="52" y="62"
+              font-family="Times New Roman, Times, serif"
+              font-size="8"
+              fill="white"
+              text-anchor="start"
+              dominant-baseline="middle">
+            | Gallery
+        </text>
+    </a>
 
-        <a href="#" id="links">
-            <text x="82" y="62" style="font-family: 'Times New Roman', Times, serif;" font-size="8" fill="white">| Links </text>
-        </a>
+    <a href="#" id="links">
+        <text x="90" y="62"
+              font-family="Times New Roman, Times, serif"
+              font-size="8"
+              fill="white"
+              text-anchor="start"
+              dominant-baseline="middle">
+            | Links
+        </text>
+    </a>
 
-        <a href="#" id="store">
-    <text x="105" y="62" style="font-family: 'Times New Roman', Times, serif;" font-size="8" fill="white">| Store |</text>
-</a>
-    </g>
+    <a href="#" id="store">
+        <text x="120" y="62"
+              font-family="Times New Roman, Times, serif"
+              font-size="8"
+              fill="white"
+              text-anchor="start"
+              dominant-baseline="middle">
+            | Store |
+        </text>
+    </a>
+</g>
+
+
+
 
     <animate attributeName="opacity" xlink:href="#buttons" values="0;1" dur="2s" begin="4.5s" fill="freeze" />
 </svg>
