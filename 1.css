@@ -205,8 +205,8 @@ line-height: 200%;
 }
 
 .store-item img {
-	max-width: 300px; 
-    max-width: 100%;
+
+    max-width: 55%;
     height: auto;
     border-radius: 5px;
 }
