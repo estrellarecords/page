@@ -75,10 +75,12 @@ $(document).on('keydown', function(e) {
 
     
     const popup = $('<div id="popup-links"></div>').html(`
+        <a href="https://www.youtube.com/@estrellarecordsmadrid" target="_blank">Youtube</a>
+        <a href="https://www.soundcloud.com/estrellarecords" target="_blank">Soundcloud</a><br>
         <a href="https://www.mixcloud.com/juliocaroa/" target="_blank">Mixcloud</a><br>
-        <a href="https://soundcloud.com/estrellarecords" target="_blank">Soundcloud</a><br>
-        <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Email</a><br>
         <a href="https://www.instagram.com/estrellarecordsmadrid/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@estrellarecordsmadrid/" target="_blank">TikTok</a>
+        <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Email</a><br>       
     `);
 
     $('body').append(popup);
