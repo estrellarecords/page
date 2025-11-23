@@ -17,6 +17,9 @@ svg {
     left: 15%;
     transform: translateY(-50%) scale(1.7);
 }
+#popup-links, #store-popup {
+    pointer-events: none;
+}
 
 .general-mobile svg {
 	position: fixed;
