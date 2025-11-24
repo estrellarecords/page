@@ -18,9 +18,23 @@ svg {
     transform: translateY(-50%) scale(1.7);
 	pointer-events: none;  /* SVG can't block clicks */
 }
-#popup-links, #store-popup {
-    pointer-events: auto; /* Popups can receive clicks */
+#popup-links {
+
+
+
+    pointer-events: none;
+
+
 }
+
+
+#store-popup {
+
+
+    pointer-events: auto;
+
+}
+	
 
 
 .general-mobile svg {
