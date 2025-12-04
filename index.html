@@ -166,71 +166,103 @@
 
     <!-- Custom JS -->
 <script>
-// ⭐ Fade-in + move-in like your SVG animations
-setTimeout(() => {
-    document.getElementById("starCanvasContainer").classList.add("showStar");
-}, 10);
-
-// ⭐ CANVAS STAR (7 points, sharp, thin, centered)
 const canvas = document.getElementById("starCanvas");
 const ctx = canvas.getContext("2d");
 
-const cx = 20;  // MATCH your circle center
-const cy = 34;
+// SVG coordinates for star & circle
+const starCx = 25; 
+const starCy = 23;
+const innerCircleCx = 20;
+const innerCircleCy = 34;
 
-const centerOffsetX = canvas.width/2 - cx;
-const centerOffsetY = canvas.height/2 - cy;
+// Canvas container size
+const canvasW = canvas.width;
+const canvasH = canvas.height;
 
+// Adjust star position relative to canvas
+const starOffsetX = canvasW/2 - starCx;
+const starOffsetY = canvasH/2 - starCy;
+
+// Star parameters
 const outerR = 75;
 const innerR = 12;
 const N = 7;
 
 let angleOffset = 0;
-let targetRot = Math.PI * 2 * 3; // ⭐ 3 full rotations
 let rotating = true;
+let targetRot = Math.PI*2*3; // 3 rotations
 
-function drawStar() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+// Inner circle animation
+let circleStartTime = null;
+const circleDelay = 4500; // ms
+const circleDuration = 600; // ms
 
+function draw() {
+    ctx.clearRect(0, 0, canvasW, canvasH);
+
+    // Draw star
     ctx.save();
-    ctx.translate(cx + centerOffsetX, cy + centerOffsetY);
+    ctx.translate(starCx + starOffsetX, starCy + starOffsetY);
     ctx.rotate(angleOffset);
 
     ctx.beginPath();
     ctx.lineWidth = 3;
     ctx.strokeStyle = "rgb(250,132,60)";
-
-    for (let i = 0; i < N * 2; i++) {
-        const r = (i % 2 === 0) ? outerR : innerR;
-        const angle = (Math.PI * 2 * i) / (N * 2) - Math.PI / 2;
-
-        const x = r * Math.cos(angle);
-        const y = r * Math.sin(angle);
-
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
+    for (let i=0; i<N*2; i++){
+        const r = (i%2===0) ? outerR : innerR;
+        const angle = (Math.PI*2*i)/(N*2) - Math.PI/2;
+        const x = r*Math.cos(angle);
+        const y = r*Math.sin(angle);
+        if(i===0) ctx.moveTo(x,y);
+        else ctx.lineTo(x,y);
     }
-
     ctx.closePath();
     ctx.stroke();
-
     ctx.restore();
+
+    // Draw inner circle after delay
+    if(circleStartTime !== null){
+        const elapsed = performance.now() - circleStartTime;
+        if(elapsed <= circleDuration){
+            // Animate r: 0 → 80 → 0
+            let r;
+            if(elapsed <= circleDuration/2){
+                r = 80 * (elapsed/(circleDuration/2));
+            } else {
+                r = 80 * (1 - (elapsed - circleDuration/2)/(circleDuration/2));
+            }
+            ctx.save();
+            ctx.fillStyle = "rgba(250,132,60,0.5)";
+            ctx.beginPath();
+            ctx.arc(innerCircleCx + starOffsetX, innerCircleCy + starOffsetY, r, 0, Math.PI*2);
+            ctx.fill();
+            ctx.restore();
+        }
+    }
 }
 
-function animate() {
-    if (rotating) {
-        angleOffset += 0.08; // rotation speed
-
-        if (angleOffset >= targetRot) {
-            angleOffset = targetRot; // freeze at final angle
+// Animation
+function animate(){
+    if(rotating){
+        angleOffset += 0.08;
+        if(angleOffset >= targetRot){
+            angleOffset = targetRot;
             rotating = false;
+            // Start inner circle animation when rotation ends
+            circleStartTime = performance.now();
         }
     }
 
-    drawStar();
+    draw();
 
-    if (rotating) requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 }
+
+// Fade + move container like SVG
+setTimeout(()=>{
+    document.getElementById("starCanvasContainer").style.opacity = 1;
+    document.getElementById("starCanvasContainer").style.transform = "translate(-4.5px,11.5px)";
+},10);
 
 animate();
 </script>
