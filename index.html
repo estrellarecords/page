@@ -3,24 +3,21 @@
 <head>
 
 <style>
-    /* Keep your existing styles + add star positioning */
     #starCanvasContainer {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 200px;
         pointer-events: none;
         opacity: 0;
-        transform: translate(-30px, -19px);
-        transition: opacity 0.8s linear 4.5s,
-                    transform 4.5s ease-in-out;
+        width: 160px;
+        height: 160px;
+        transform: translate(-30px, -19px); /* matches old SVG starting point */
+        transition:
+            opacity 0.8s linear 4.5s,
+            transform 4.5s ease-in-out;
     }
 
-    /* Final transformed position */
     #starCanvasContainer.showStar {
         opacity: 1;
-        transform: translate(-4.5px, 11.5px);
+        transform: translate(-4.5px, 11.5px); /* final SVG position */
     }
 
     #starCanvas {
@@ -168,28 +165,35 @@
     </figure>
 
     <!-- Custom JS -->
-    <script>
-// Fade-in + move-in timing identical to old SVG
+<script>
+// ⭐ Fade-in + move-in like your SVG animations
 setTimeout(() => {
     document.getElementById("starCanvasContainer").classList.add("showStar");
 }, 10);
 
-// CANVAS STAR DRAWING
+// ⭐ CANVAS STAR (7 points, sharp, thin, centered)
 const canvas = document.getElementById("starCanvas");
 const ctx = canvas.getContext("2d");
-const cx = canvas.width / 2;
-const cy = canvas.height / 2;
 
-const outerR = 70;   // adjust to match logo size
-const innerR = 18;   // thin center
+const cx = 20;  // MATCH your circle center
+const cy = 34;
+
+const centerOffsetX = canvas.width/2 - cx;
+const centerOffsetY = canvas.height/2 - cy;
+
+const outerR = 75;
+const innerR = 12;
 const N = 7;
+
 let angleOffset = 0;
+let targetRot = Math.PI * 2 * 3; // ⭐ 3 full rotations
+let rotating = true;
 
 function drawStar() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.save();
-    ctx.translate(cx, cy);
+    ctx.translate(cx + centerOffsetX, cy + centerOffsetY);
     ctx.rotate(angleOffset);
 
     ctx.beginPath();
@@ -199,6 +203,7 @@ function drawStar() {
     for (let i = 0; i < N * 2; i++) {
         const r = (i % 2 === 0) ? outerR : innerR;
         const angle = (Math.PI * 2 * i) / (N * 2) - Math.PI / 2;
+
         const x = r * Math.cos(angle);
         const y = r * Math.sin(angle);
 
@@ -208,14 +213,25 @@ function drawStar() {
 
     ctx.closePath();
     ctx.stroke();
+
     ctx.restore();
 }
 
 function animate() {
-    angleOffset += 0.03; // spin speed
+    if (rotating) {
+        angleOffset += 0.08; // rotation speed
+
+        if (angleOffset >= targetRot) {
+            angleOffset = targetRot; // freeze at final angle
+            rotating = false;
+        }
+    }
+
     drawStar();
-    requestAnimationFrame(animate);
+
+    if (rotating) requestAnimationFrame(animate);
 }
+
 animate();
 </script>
     <script src="1.js"></script>
