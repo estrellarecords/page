@@ -155,7 +155,7 @@ line-height: 200%;
 @media (max-width: 768px) {
   .mfp-figure {
     padding: 0;
-  },
+  }
     #popup-links {
         width: 100vw;  /* Wider on smaller screens */
         left: 10vw !important;  /* Center more on smaller screens */
