@@ -25,7 +25,7 @@ const storePopup = $(`
     <div id="store-popup">
         <div class="close-btn">&times;</div>
         <div id="store-content">      </div>
-        <div>  <p>Contact <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Here</a> for purchases and inquiries. </p></br>  <h3>Legal Notice & Privacy Policy</h3>
+        <div>  <p>Contact <a href="mailto:web@estrellarecords.com?subject=Webform"  target="_blank">Here</a> for purchases and inquiries. </p></br>  <h3>Legal Notice & Privacy Policy</h3>
     <p>This is a personal webpage created for the occasional sale of privately owned collectible items. It is not a commercial or professional business activity. </p>
     <p>This website does not collect personal data through forms. If you contact me by email, the information you provide (such as your name, email address, and message) will be used solely to respond to your inquiry or manage the possible sale. Your data will not be stored or shared with third parties.</p>
  </div>
@@ -80,7 +80,7 @@ $(document).on('keydown', function(e) {
         <a href="https://www.mixcloud.com/juliocaroa/" target="_blank">Mixcloud</a><br>
         <a href="https://www.instagram.com/estrellarecordsmadrid/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@estrellarecordsmadrid/" target="_blank">TikTok</a>
-        <a href="mailto:juliocaro@estrellarecords.com?subject=Webform"  target="_blank">Email</a><br>       
+        <a href="mailto:web@estrellarecords.com?subject=Webform"  target="_blank">Email</a><br>       
     `);
 
     $('body').append(popup);
