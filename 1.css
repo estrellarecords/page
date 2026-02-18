@@ -19,7 +19,11 @@ svg {
 	z-index: 1; /* add this */
 }
 
-
+#buttons text,
+#buttons tspan {
+    pointer-events: visiblePainted; /* allow clicks through SVG text */
+    cursor: pointer;                 /* show hand cursor */
+}
 
 #store-popup {
 
