@@ -37,7 +37,7 @@ $('body').append(storePopup);
 storeItems.forEach(item => {
     const html = `
         <div class="store-item">
-            <img src="${item.image}" alt="${item.title}">
+            <img loading="lazy" src="${item.image}" alt="${item.title}">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
             <p class="price">${item.price}</p>
@@ -189,8 +189,13 @@ $('#links').on('click', function(event) {
                     const currentTime = new Date();
                     const timeOffset = currentTime.getTimezoneOffset(); // Get offset in minutes from UTC
                     const UTC2Offset = -120; // UTC+2 offset is -120 minutes
-                    const localTime = new Date(currentTime.getTime() + (UTC2Offset - timeOffset) * 60000); // Adjust time to GMT+1
-                    const time = localTime.toISOString().split('T')[1].split('.')[0]; // Extract time part from ISO string
+                    const time = new Intl.DateTimeFormat('es-ES', {
+  timeZone: 'Europe/Madrid',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit'
+}).format(new Date());
+
                     
                     // Log each image or video view as a goal with the current time (GMT+1)
                     if (mediaType === 'image') {
