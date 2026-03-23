@@ -107,6 +107,36 @@
             <animate attributeName="d" values="M 300 54 a 1 1 0 0 0 0 -40 h 0 a 1 1 0 0 0 0 40 z; M 220 54 a 1 1 0 0 0 0 -40 h -200 a 1 1 0 0 0 0 40 z; M 20 54 a 1 1 0 0 0 0 -40 h 0 a 1 1 0 0 0 0 40 z" dur="3s" begin="0s" fill="freeze"/>
         </path>
 
+
+<text id="introText"
+      x="75"
+      y="35"
+      text-anchor="middle"
+      font-family="Times New Roman, Times, serif"
+      font-size="6"
+      fill="black"
+      opacity="0">
+
+    somewhere in calle estrella .
+
+    <!-- Fade in with the white sweep -->
+    <animate attributeName="opacity"
+             values="0;1"
+             dur="0.6s"
+             begin="0s"
+             fill="freeze" />
+
+    <!-- Stay visible, then fade out after sweep -->
+    <animate attributeName="opacity"
+             values="1;1;0"
+             keyTimes="0;0.7;1"
+             dur="3s"
+             begin="0s"
+             fill="freeze" />
+</text>
+
+        
+
         <g transform="translate(202 0)">
             <use href="#title" fill="#F7FFCC"/>
             <animateTransform attributeName="transform" type="translate" values="262 0;0 0" dur="2s" begin="1s" fill="freeze"/>
