@@ -90,7 +90,6 @@ $(document).on('keydown', function(e) {
 
     $(document).on('click', function(event) {
         if (!$(event.target).closest('#popup-links, #links').length) {
-            clicky.log("/links/close", "Links Popup Close", "pageview");
             popup.hide();
         }
     });
