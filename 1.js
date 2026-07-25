@@ -8,7 +8,7 @@ const storeItems = [
         title: 'Blanco y Negro VIPDJ Headphones',
         description: 'Pioneer HDJ2000 Limited Edition. Ibiza, early 2010s. Blanco y Negro record label official product. 40 units ever built. Worn by famous balearic Djs. Handmade by master jewelers with aprox. 4.000~ SWAROVSKI ELEMENTS T crystals.'
        +   ' <p> Comes with the Pioneer Blanco y Negro cover box, a hard plastic protective case, and the business card of the jeweler that made them. Mint condition. </p>'
-       +   ' <p><a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php">Read more</a></p>',
+       +   ' <p><a href="https://luxurylaunches.com/gadgets/swarowski_studded_pioneer_hdj2000_headphones_for_the_starryeyed_djs.php" target="_blank" rel="noopener noreferrer" onclick="clicky.log('/store/readmore','Store Read More','pageview')">>Read more</a></p>',
         price: '€3500.00',
         image: '/pics/store/1.jpeg'
     }//,
@@ -25,7 +25,7 @@ const storePopup = $(`
     <div id="store-popup">
         <div class="close-btn">&times;</div>
         <div id="store-content">      </div>
-        <div>  <p>Contact <a href="mailto:web@estrellarecords.com?subject=Webform"  target="_blank">Here</a> for purchases and inquiries. </p></br>  <h3>Legal Notice & Privacy Policy</h3>
+        <div>  <p>Contact <a href="mailto:web@estrellarecords.com?subject=Webform"  target="_blank" onclick="clicky.log('/contact/email','Contact Email','pageview')">Here</a> for purchases and inquiries. </p></br>  <h3>Legal Notice & Privacy Policy</h3>
     <p>This is a personal webpage created for the occasional sale of privately owned collectible items. It is not a commercial or professional business activity. </p>
     <p>This website does not collect personal data through forms. If you contact me by email, the information you provide (such as your name, email address, and message) will be used solely to respond to your inquiry or manage the possible sale. Your data will not be stored or shared with third parties.</p>
  </div>
@@ -48,17 +48,20 @@ storeItems.forEach(item => {
 
 // Show/hide logic
 $('#store').on('click', function(event) {
+    clicky.log("/store", "Store Open", "pageview");
     event.preventDefault();
     $('#store-popup').fadeIn(300);
 });
 
 $('#store-popup .close-btn').on('click', function() {
+    clicky.log("/store/close", "Store Close Button", "pageview");
     $('#store-popup').fadeOut(300);
 });
 
 // Optional: close on ESC
 $(document).on('keydown', function(e) {
     if (e.key === "Escape") {
+        clicky.log("/store/escape", "Store Close Escape", "pageview");
         $('#store-popup').fadeOut(300);
     }
 });
@@ -75,23 +78,25 @@ $(document).on('keydown', function(e) {
 
     
     const popup = $('<div id="popup-links"></div>').html(`
-        <a href="https://www.youtube.com/@estrellarecordsmadrid" target="_blank">Youtube</a>
-        <a href="https://www.soundcloud.com/estrellarecords" target="_blank">Soundcloud</a><br>
-        <a href="https://www.mixcloud.com/juliocaroa/" target="_blank">Mixcloud</a><br>
-        <a href="https://www.instagram.com/estrellarecordsmadrid/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@estrellarecordsmadrid/" target="_blank">TikTok</a>
-        <a href="mailto:web@estrellarecords.com?subject=Webform"  target="_blank">Email</a><br>       
+        <a href="https://www.youtube.com/@estrellarecordsmadrid" target="_blank" onclick="clicky.log('/out/youtube','YouTube','pageview')">Youtube</a>
+        <a href="https://www.soundcloud.com/estrellarecords" target="_blank" onclick="clicky.log('/out/soundcloud','SoundCloud','pageview')">Soundcloud</a><br>
+        <a href="https://www.mixcloud.com/juliocaroa/" target="_blank" onclick="clicky.log('/out/mixcloud','Mixcloud','pageview')">Mixcloud</a><br>
+        <a href="https://www.instagram.com/estrellarecordsmadrid/" target="_blank" onclick="clicky.log('/out/instagram','Instagram','pageview')">Instagram</a>
+        <a href="https://www.tiktok.com/@estrellarecordsmadrid/" target="_blank" https://www.tiktok.com/@estrellarecordsmadrid/>TikTok</a>
+        <a href="mailto:web@estrellarecords.com?subject=Webform"  target="_blank" onclick="clicky.log('/out/email','Email','pageview')">Email</a><br>       
     `);
 
     $('body').append(popup);
 
     $(document).on('click', function(event) {
         if (!$(event.target).closest('#popup-links, #links').length) {
+            clicky.log("/links/close", "Links Popup Close", "pageview");
             popup.hide();
         }
     });
 
 $('#links').on('click', function(event) {
+    clicky.log("/links", "Links Popup Open", "pageview");
     event.stopPropagation(); // Prevent event bubbling up to document click
 
     const buttonPosition = $(this).offset();
@@ -114,6 +119,7 @@ $('#links').on('click', function(event) {
 
 
     $('#gallery').on('click', function(event) {
+        clicky.log("/gallery", "Gallery Open", "pageview");
         event.preventDefault(); // Prevent default link behavior
 
         $.magnificPopup.open({
@@ -199,9 +205,9 @@ $('#links').on('click', function(event) {
                     
                     // Log each image or video view as a goal with the current time (GMT+1)
                     if (mediaType === 'image') {
-                        clicky.goal('P' + mediaIndex + ' ' + time); // Image view with time
+                        clicky.log( "/gallery/image" + mediaIndex,  "Gallery Image " + mediaIndex,  "pageview");
                     } else if (mediaType === 'iframe') {
-                        clicky.goal('V' + mediaIndex + ' ' + time); // Video view with time
+                        clicky.log(  "/gallery/video" + mediaIndex,"Gallery Video " + mediaIndex, "pageview");
                     }
 
                 }
