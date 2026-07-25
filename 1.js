@@ -54,7 +54,6 @@ $('#store').on('click', function(event) {
 });
 
 $('#store-popup .close-btn').on('click', function() {
-    clicky.log("/store/close", "Store Close Button", "pageview");
     $('#store-popup').fadeOut(300);
 });
 
