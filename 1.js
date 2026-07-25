@@ -116,7 +116,6 @@ $('#links').on('click', function(event) {
 
 
     $('#gallery').on('click', function(event) {
-        clicky.log("/gallery", "Gallery Open", "pageview");
         event.preventDefault(); // Prevent default link behavior
 
         $.magnificPopup.open({
