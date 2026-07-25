@@ -60,7 +60,6 @@ $('#store-popup .close-btn').on('click', function() {
 // Optional: close on ESC
 $(document).on('keydown', function(e) {
     if (e.key === "Escape") {
-        clicky.log("/store/escape", "Store Close Escape", "pageview");
         $('#store-popup').fadeOut(300);
     }
 });
